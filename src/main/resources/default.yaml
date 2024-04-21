@@ -1,0 +1,14 @@
+ordermaster-starter:
+  web:
+    security:
+      requestMatchers:
+        - roles:
+            - MANAGER
+          urlPatterns:
+            - /internal/manager/**
+
+        - roles:
+            - CLIENT
+          urlPatterns:
+            - /{cityId}/register/**
+
